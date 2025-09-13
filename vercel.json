@@ -1,21 +1,9 @@
-// vercel.json
 {
   "version": 2,
   "name": "delta-key-system",
   "functions": {
     "api/*.js": {
-      "runtime": "nodejs18.x",
-      "maxDuration": 10
-    }
-  },
-  "env": {
-    "ADMIN_PASSWORD": "@admin_password",
-    "ENCRYPTION_KEY": "@encryption_key",
-    "NODE_ENV": "production"
-  },
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
+      "runtime": "nodejs18.x"
     }
   },
   "headers": [
@@ -33,18 +21,8 @@
         {
           "key": "Access-Control-Allow-Headers",
           "value": "Content-Type, Authorization"
-        },
-        {
-          "key": "Access-Control-Max-Age",
-          "value": "86400"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/api/status"
     }
   ]
 }
