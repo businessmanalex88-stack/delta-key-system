@@ -1,4 +1,4 @@
-/ api/validate.js
+// api/validate.js
 const crypto = require('crypto');
 
 // Use global database
